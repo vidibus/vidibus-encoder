@@ -97,7 +97,7 @@ describe Vidibus::Encoder::Util::Profile do
 
     it 'should fail without a base' do
       profile.base = nil
-      expect { profile.validate }.to raise_error(Vidibus::Encoder::ProfileError, 'Define a encoder class for this profile')
+      expect { profile.validate }.to raise_error(Vidibus::Encoder::ProfileError, 'Define an encoder class for this profile')
     end
 
     it 'should work with valid attributes' do

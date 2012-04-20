@@ -3,7 +3,7 @@ module Vidibus
 
     # This is the main encoder that you can build your own encoders on.
     #
-    # The workflow of a encoder is as follows:
+    # The workflow of an encoder is as follows:
     #
     # initialize
     # run
@@ -25,7 +25,7 @@ module Vidibus
 
       attr_reader :options, :tmp, :input, :output, :profile, :profiles
 
-      # Initialize a encoder instance with given options. Two options are
+      # Initialize an encoder instance with given options. Two options are
       # mandatory:
       #
       # :input  [String]  The path to the input file

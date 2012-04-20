@@ -20,7 +20,7 @@ module Vidibus
         def validate
           raise(ProfileError, 'Define a name for this profile') if [nil, ''].include?(name)
           raise(ProfileError, 'Define a settings hash for this profile') unless settings.is_a?(Hash) && settings.any?
-          raise(ProfileError, 'Define a encoder class for this profile') unless base
+          raise(ProfileError, 'Define an encoder class for this profile') unless base
         end
 
         # Return a list of all profile attributes
