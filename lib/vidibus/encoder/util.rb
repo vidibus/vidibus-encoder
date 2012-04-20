@@ -1,0 +1,6 @@
+require 'vidibus/encoder/util/tmp'
+require 'vidibus/encoder/util/input'
+require 'vidibus/encoder/util/output'
+require 'vidibus/encoder/util/profile'
+require 'vidibus/encoder/util/profiles'
+require 'vidibus/encoder/util/flags'
