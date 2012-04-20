@@ -10,8 +10,8 @@ module Vidibus
     #   validate_options
     #   prepare
     #   => for each profile:
-    #     preprocess
     #     next unless process?
+    #     preprocess
     #     process
     #     postprocess
     #   finish
