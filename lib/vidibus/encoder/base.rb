@@ -79,7 +79,8 @@ module Vidibus
       def run
         validate_options
         prepare
-        profiles.sorted.each do |@profile|
+        profiles.sorted.each do |p|
+          @profile = p
           next unless process?
           preprocess
           process

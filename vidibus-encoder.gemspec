@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = s.name
 
   s.add_dependency 'posix-spawn'
-  s.add_dependency 'vidibus-fileinfo', '~> 1.0.0'
+  s.add_dependency 'vidibus-fileinfo'
   s.add_dependency 'vidibus-uuid'
 
   s.add_development_dependency 'bundler', '>= 1.0.0'
