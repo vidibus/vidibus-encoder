@@ -14,5 +14,3 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
   rdoc.options << '--charset=utf-8'
 end
-
-task :default => :rcov
