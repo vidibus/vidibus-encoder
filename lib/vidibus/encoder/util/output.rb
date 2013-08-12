@@ -24,7 +24,7 @@ module Vidibus
 
         # Return the directory name from path.
         def dir
-          @dir ||= (!exist? || directory?) ? path : File.dirname(path)
+          @dir ||= directory? ? path : File.dirname(path)
         end
 
         # Extract the file name from given path or input file.

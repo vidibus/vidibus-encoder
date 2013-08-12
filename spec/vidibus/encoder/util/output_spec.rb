@@ -37,7 +37,15 @@ describe Vidibus::Encoder::Util::Output do
   end
 
   describe '#dir' do
-    it 'should be spec\'d'
+    it 'should determine the directory name from file name' do
+      output.path = 'what/ever/it_takes.m3u8'
+      output.dir.should eq('what/ever')
+    end
+
+    it 'should determine the directory name from directory name' do
+      output.path = 'what/ever'
+      output.dir.should eq('what/ever')
+    end
   end
 
   describe '#file_name' do
