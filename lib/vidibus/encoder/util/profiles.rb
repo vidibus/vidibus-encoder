@@ -17,7 +17,9 @@ module Vidibus
         def available
           @available ||= begin
             (base.class.registered_profiles || {}).tap do |items|
-              items.merge!(base.class.profile_presets) if base.class.profile_presets
+              if base.class.profile_presets
+                items.merge!(base.class.profile_presets)
+              end
             end
           end
         end
