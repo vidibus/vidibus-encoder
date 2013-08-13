@@ -214,7 +214,7 @@ module Vidibus
       # Hook for finishing touches.
       # TODO: Describe.
       def finish
-        encoded_files = output.copy_files
+        encoded_files = output.move_files
         tmp.remove_dir
         encoded_files
       end

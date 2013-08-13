@@ -80,16 +80,16 @@ module Vidibus
           FileUtils.mkdir_p(dir) unless exist?
         end
 
-        # Copy files from tmp folder to output folder.
-        def copy_files
+        # Move files from tmp folder to output folder.
+        def move_files
           begin
-            files = Dir.glob("#{base.tmp}/*")
-            FileUtils.cp_r(files, dir)
+            files = Dir["#{base.tmp}/*"]
             files.each do |file|
+              FileUtils.mv(file, dir)
               file.gsub!(base.tmp.to_s, dir)
             end
           rescue => e
-            raise("Copying output files from #{base.tmp} to #{path} failed: #{e.message}")
+            raise("Moving output files from #{base.tmp} to #{path} failed: #{e.message}")
           end
         end
       end
